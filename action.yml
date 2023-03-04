@@ -1,0 +1,20 @@
+name: Publish Kaldea Frontend App on Cloudfront
+description: ""
+inputs:
+  env:
+    description: env / stg / prod
+    default: "dev"
+outputs:
+  success:
+    description: ""
+    value: "success"
+runs:
+  using: "composite"
+  steps:
+    - run: echo Hello ${{ inputs.env }}.
+      name: "step1"
+      shell: bash
+
+    - run: echo Hello ${{ inputs.env }}.
+      name: "step2"
+      shell: bash
